@@ -289,6 +289,21 @@ footer>div {
     text-align: center;
 }
 
+.play {
+    position: relative;
+}
+
+.play-game {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 45%;
+    color: white;
+}
+
+.play:hover .play-game {
+    display: block;
+}
 
 
 @media screen and (max-width:576px) {
