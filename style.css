@@ -293,8 +293,16 @@ footer>div {
     position: relative;
 }
 
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background: linear-gradient(45deg, #333, #000);
+}
+
 .play-game {
-    display: none;
+    visibility: hidden;
     position: absolute;
     top: 50%;
     right: 45%;
@@ -302,7 +310,18 @@ footer>div {
 }
 
 .play:hover .play-game {
-    display: block;
+    visibility: visible;
+    transition: visibility 510ms ease-in;
+}
+
+.play:hover .overlay {
+    opacity: 0.8;
+    transition: opacity 510ms ease-in;
+}
+
+.play:hover {
+    transform: scale(0.8);
+    transition: transform 510ms ease-in;
 }
 
 @media screen and (max-width:576px) {
